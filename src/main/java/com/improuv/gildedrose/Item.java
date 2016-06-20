@@ -1,3 +1,4 @@
+package com.improuv.gildedrose;
 
 public class Item {
     public String name;

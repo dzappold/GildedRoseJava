@@ -1,3 +1,4 @@
+package com.improuv.gildedrose;
 import java.util.ArrayList;
 
 public class Main {

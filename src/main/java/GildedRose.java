@@ -1,6 +1,13 @@
+import java.util.Arrays;
 import java.util.List;
 
 public class GildedRose {
+
+	static GildedRose with(Item ... items) {
+		GildedRose app = new GildedRose();
+		app.items = Arrays.asList(items);
+		return app;
+	}
 
 	List<Item> items = null;
 

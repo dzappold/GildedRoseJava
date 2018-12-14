@@ -1,4 +1,4 @@
-package com.improuv.gildedrose;
+package com.acme.gildedrose;
 
 public class Item {
     public String name;

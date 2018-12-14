@@ -1,4 +1,4 @@
-package com.improuv.gildedrose;
+package com.acme.gildedrose;
 
 import static org.junit.Assert.assertTrue;
 

@@ -1,4 +1,4 @@
-package com.improuv.gildedrose;
+package com.acme.gildedrose;
 import java.util.Arrays;
 import java.util.List;
 

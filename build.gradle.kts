@@ -9,7 +9,7 @@ buildscript {
 plugins {
     java
     jacoco
-    id("de.fayard.buildSrcVersions") version "0.3.2"
+    id("de.fayard.buildSrcVersions") version "0.7.0"
 }
 
 group = "com.acme"
@@ -34,6 +34,7 @@ dependencies {
     testImplementation(Libs.junit_jupiter_params)
     testImplementation(Libs.hamcrest)
     testImplementation(Libs.mockito_core)
+    testImplementation(Libs.mockito_junit_jupiter)
     testImplementation(Libs.junit_quickcheck_core)
     testImplementation(Libs.junit_quickcheck_generators)
     testImplementation(Libs.junit_quickcheck_guava)
@@ -45,7 +46,7 @@ dependencies {
 }
 
 jacoco {
-    toolVersion = "0.8.3"
+    toolVersion = "0.8.5"
     reportsDir = file("$buildDir/jacocoReport")
 }
 
@@ -66,5 +67,5 @@ tasks.test {
 }
 
 tasks.wrapper {
-    gradleVersion = Versions.Gradle.currentVersion
+    gradleVersion = Versions.gradleLatestVersion
 }

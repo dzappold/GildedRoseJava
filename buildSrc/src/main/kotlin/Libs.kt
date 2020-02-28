@@ -23,53 +23,9 @@ object Libs {
     const val junit_jupiter_params: String = "org.junit.jupiter:junit-jupiter-params:" +
             Versions.org_junit_jupiter
 
-    /**
-     * http://github.com/pholser/junit-quickcheck
-     */
-    const val junit_quickcheck: String = "com.pholser:junit-quickcheck:" + Versions.com_pholser
-
-    /**
-     * http://github.com/pholser/junit-quickcheck
-     */
-    const val junit_quickcheck_core: String = "com.pholser:junit-quickcheck-core:" +
-            Versions.com_pholser
-
-    /**
-     * http://github.com/pholser/junit-quickcheck
-     */
-    const val junit_quickcheck_generators: String = "com.pholser:junit-quickcheck-generators:" +
-            Versions.com_pholser
-
-    /**
-     * http://github.com/pholser/junit-quickcheck
-     */
-    const val junit_quickcheck_guava: String = "com.pholser:junit-quickcheck-guava:" +
-            Versions.com_pholser
-
-    /**
-     * https://github.com/mockito/mockito
-     */
-    const val mockito_core: String = "org.mockito:mockito-core:" + Versions.org_mockito
-
-    /**
-     * https://github.com/mockito/mockito
-     */
-    const val mockito_junit_jupiter: String = "org.mockito:mockito-junit-jupiter:" +
-            Versions.org_mockito
-
-    /**
-     * http://pitest.org
-     */
-    const val pitest: String = "org.pitest:pitest:" + Versions.org_pitest
-
-    /**
-     * http://pitest.org
-     */
-    const val pitest_command_line: String = "org.pitest:pitest-command-line:" + Versions.org_pitest
-
     const val de_fayard_buildsrcversions_gradle_plugin: String =
             "de.fayard.buildSrcVersions:de.fayard.buildSrcVersions.gradle.plugin:" +
-                    Versions.de_fayard_buildsrcversions_gradle_plugin
+            Versions.de_fayard_buildsrcversions_gradle_plugin
 
     /**
      * http://hamcrest.org/JavaHamcrest/

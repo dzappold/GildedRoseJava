@@ -33,14 +33,6 @@ dependencies {
     testImplementation(Libs.junit_jupiter_api)
     testImplementation(Libs.junit_jupiter_params)
     testImplementation(Libs.hamcrest)
-    testImplementation(Libs.mockito_core)
-    testImplementation(Libs.mockito_junit_jupiter)
-    testImplementation(Libs.junit_quickcheck_core)
-    testImplementation(Libs.junit_quickcheck_generators)
-    testImplementation(Libs.junit_quickcheck_guava)
-    testImplementation(Libs.junit_quickcheck)
-    testImplementation(Libs.pitest)
-    testImplementation(Libs.pitest_command_line)
 
     testRuntime(Libs.junit_jupiter_engine)
 }

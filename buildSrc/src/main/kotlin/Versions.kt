@@ -13,12 +13,6 @@ import org.gradle.plugin.use.PluginDependencySpec
 object Versions {
     const val org_junit_jupiter: String = "5.6.0"
 
-    const val com_pholser: String = "0.9.1"
-
-    const val org_mockito: String = "3.3.1"
-
-    const val org_pitest: String = "1.5.0"
-
     const val de_fayard_buildsrcversions_gradle_plugin: String = "0.7.0"
 
     const val hamcrest: String = "2.2"
@@ -37,4 +31,4 @@ object Versions {
  */
 val PluginDependenciesSpec.buildSrcVersions: PluginDependencySpec
     inline get() =
-        id("de.fayard.buildSrcVersions").version(Versions.de_fayard_buildsrcversions_gradle_plugin)
+            id("de.fayard.buildSrcVersions").version(Versions.de_fayard_buildsrcversions_gradle_plugin)

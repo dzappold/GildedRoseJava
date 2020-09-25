@@ -1,3 +1,5 @@
+import org.gradle.api.tasks.testing.logging.TestLogEvent.*
+
 buildscript {
     repositories {
         mavenLocal()
@@ -53,8 +55,13 @@ tasks.jacocoTestReport {
 
 tasks.test {
     extensions.configure(JacocoTaskExtension::class) {
-        destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+        setDestinationFile(file("$buildDir/jacoco/jacocoTest.exec"))
         classDumpDir = file("$buildDir/jacoco/classpathdumps")
+    }
+
+    useJUnitPlatform()
+    testLogging {
+        events(PASSED, SKIPPED, FAILED)
     }
 }
 

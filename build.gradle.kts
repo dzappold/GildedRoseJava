@@ -1,9 +1,9 @@
-import org.gradle.api.tasks.testing.logging.TestLogEvent.*
+import org.gradle.api.tasks.testing.logging.TestLogEvent.FAILED
+import org.gradle.api.tasks.testing.logging.TestLogEvent.PASSED
+import org.gradle.api.tasks.testing.logging.TestLogEvent.SKIPPED
 
 buildscript {
     repositories {
-        mavenLocal()
-        jcenter()
         google()
         mavenCentral()
     }
@@ -11,7 +11,7 @@ buildscript {
 plugins {
     java
     jacoco
-    id("de.fayard.buildSrcVersions") version "0.7.0"
+    id("com.github.ben-manes.versions") version "0.39.0"
 }
 
 group = "com.acme"
@@ -25,18 +25,21 @@ java {
 description = "Gilded Rose"
 
 repositories {
-    jcenter()
-    mavenLocal()
     mavenCentral()
-    //maven { url("http://repo.gradle.org/gradle/libs-releases-local") }
 }
 
 dependencies {
-    testImplementation(Libs.junit_jupiter_api)
-    testImplementation(Libs.junit_jupiter_params)
-    testImplementation(Libs.hamcrest)
+    val junitVersion = "5.7.2"
+    val hamcrestVersion = 2.2
+    val assertjVersion = "3.20.2"
 
-    testRuntime(Libs.junit_jupiter_engine)
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
+
+    testImplementation("org.hamcrest:hamcrest:$hamcrestVersion")
+    testImplementation("org.assertj:assertj-core:$assertjVersion")
+
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
 
 jacoco {
@@ -48,8 +51,8 @@ tasks.jacocoTestReport {
     group = "Reporting"
     description = "Generate Jacoco coverage reports after running tests."
     reports {
-        xml.isEnabled = true
-        html.isEnabled = true
+        xml.required.set(true)
+        html.required.set(true)
     }
 }
 
@@ -63,8 +66,4 @@ tasks.test {
     testLogging {
         events(PASSED, SKIPPED, FAILED)
     }
-}
-
-tasks.wrapper {
-    gradleVersion = Versions.gradleLatestVersion
 }

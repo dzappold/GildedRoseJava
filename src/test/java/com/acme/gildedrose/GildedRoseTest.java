@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class GildedRoseTest {
+class GildedRoseTest {
 
 	@Test
-	public void testTheTruth() {
+	void testTheTruth() {
 		assertTrue(true);
 	}
 }

@@ -32,9 +32,12 @@ dependencies {
     val junitVersion = "5.7.2"
     val hamcrestVersion = 2.2
     val assertjVersion = "3.20.2"
+    val jqwikVersion = "1.5.2"
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
+    testImplementation("net.jqwik:jqwik:${jqwikVersion}")
+
 
     testImplementation("org.hamcrest:hamcrest:$hamcrestVersion")
     testImplementation("org.assertj:assertj-core:$assertjVersion")

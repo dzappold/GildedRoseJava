@@ -11,7 +11,7 @@ buildscript {
 plugins {
     java
     jacoco
-    id("com.github.ben-manes.versions") version "0.40.0"
+    id("com.github.ben-manes.versions") version "0.41.0"
 }
 
 group = "com.acme"

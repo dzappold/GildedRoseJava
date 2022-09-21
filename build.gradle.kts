@@ -29,7 +29,7 @@ repositories {
 }
 
 dependencies {
-    val junitVersion = "5.9.0"
+    val junitVersion = "5.9.1"
     val hamcrestVersion = 2.2
     val assertjVersion = "3.23.1"
 

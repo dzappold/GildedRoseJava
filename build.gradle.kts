@@ -31,7 +31,7 @@ repositories {
 dependencies {
     val junitVersion = "5.9.1"
     val hamcrestVersion = 2.2
-    val assertjVersion = "3.23.1"
+    val assertjVersion = "3.24.1"
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
